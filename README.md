@@ -195,44 +195,10 @@
 &ensp;&ensp;&ensp;&ensp;data consists of several mesh data, each of which contains vertex and triangular face index data;
 
 &ensp;&ensp;&ensp;&ensp;Data is stored in little-endian format, and the complete file format is:
+![structure](https://github.com/xgrids/LCCWhitepaper/blob/main/a008.png "structure")
 
-| **Field** |     |     |     | **Data Format** | **Description** | bytesOffset |
-| --- | --- | --- | --- | --- | --- | --- |
-| header | magic |     |     | uint32 | File identifier, fixed value 0x6c6c6f63 | 0   |
-| version |     |     | uint32 | Version number, the current version number is 2<br><br>(for protocol extension) | 4   |
-| headerLen |     |     | uint32 | Total length of file header data (number of bytes) | 8   |
-| min |     | x   | float32 | Scene Bounding Box Min Value | 12  |
-| y   | float32 | 16  |
-| z   | float32 | 20  |
-| max |     | x   | float32 | Scene Bounding Box Max Value | 24  |
-| y   | float32 | 28  |
-| z   | float32 | 32  |
-| cellLengthX |     |     | float32 | Length of the chunk in the x-direction | 36  |
-| cellLengthY |     |     | float32 | Length of the chunk in the y-direction | 40  |
-| meshNum |     |     | uint32 | Mesh Count | 44  |
-| meshHeader0<br><br>(40) | indexX |     | uint32 | X Index | 48 - 0 |
-| indexY |     | uint32 | Y Index | 4   |
-| offset |     | uint64 | Mesh Data Offset | 8   |
-| bytesSize（包括BVH） |     | uint64 | Mesh Data Length | 16  |
-| vertexNum |     | uint32 | Number of Vertices | 24  |
-| faceNum |     | uint32 | Triangle Count | 28  |
-| bvhSize |     | uint32 | BVH Data Length<br><br>(This field is 0 in Version 1) | 32  |
-| reserved1 |     | uint32 | Reserved (default value is 0) | 36  |
-| ... |     |     | ... | ... |     |
-| data | mesh0 | vertexes | x   | float32 | Vertex data, where each vertex contains three values: x, y, and z |     |
-| y   | float32 |     |
-| z   | float32 |     |
-| ... | ... |     |
-| faces | f0  | uint32 | Triangular face data, where each face contains three index values<br><br>(index value starts from 0) |     |
-| f1  | uint32 |     |
-| f2  | uint32 |     |
-| ... | ... |     |
-| bvh | reserved0 | uint32 | Reserved (default value is 0) |     |
-| reserved1 | uint32 | Reserved (default value is 0) |     |
-| reserved2 | uint32 | Reserved (default value is 0) |     |
-| reserved3 | uint32 | Reserved (default value is 0) |     |
-| data | uint8\[\] | BVH Acceleration Structure Data |     |
-| ... |     |     | ... | ... |     |
+![structure](https://github.com/xgrids/LCCWhitepaper/blob/main/a009.png "structure")
+
 
 &ensp;&ensp;&ensp;&ensp;The Collision.lci file mainly includes two types of data: one is the **segmented Mesh data,** where the Mesh segmentation is consistent with that of the lcc scene Data; the other is the preprocessed BVH acceleration structure of the segmented data, which is mainly used for fast collision testing. The Mesh data can be read for rendering and display, or it can be left unread.
 
