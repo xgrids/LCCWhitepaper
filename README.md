@@ -1,5 +1,9 @@
 # LCC Data Organization Format White Paper
 
+&ensp;&ensp;&ensp;&ensp;The Lixel CyberColor (LCC) format, developed by XGRIDS, is designed to streamline 3D Gaussian Splatting (3DGS) workflows by providing an efficient, high-fidelity solution for spatial data captured via Multi-SLAM technology. Offering file size reductions compared to traditional formats like PLY, LCC preserves visual quality while supporting progressive scene loading for large-area applications. With seamless compatibility across platforms such as Three.js, Unity, Unreal, and Cesium, the LCC format eliminates the need for time-consuming data conversions, making it an ideal choice for industries like architecture, film, and robotics. 
+
+&ensp;&ensp;&ensp;&ensp;This document outlines the technical specifications and structure of the LCC format, offering insight into how it supports efficient data capture, processing, and integration within modern 3D workflows.
+
 ## (1) Terms and Concepts
 
 ![structure](https://github.com/xgrids/LCCWhitepaper/blob/main/a001.png "structure")
