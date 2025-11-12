@@ -147,12 +147,12 @@
 | **Attribute** | **Component** | **ByteDance** | **Type** | **Remarks** |
 | --- | --- | --- | --- | --- |
 | **Postion** | X   | 4   | float |     |
-| Y   | 4   | float |     |
-| Z   | 4   | float |     |
+|     | Y   | 4   | float |     |
+|     | Z   | 4   | float |     |
 | **Color** | RGBA | 4   | uint32 | R: uint8, G: uint8, B: uint8, A: uint8 |
 | **Scale** | X   | 2   | uint16 |     |
-| Y   | 2   | uint16 |     |
-| Z   | 2   | uint16 |     |
+|     | Y   | 2   | uint16 |     |
+|     | Z   | 2   | uint16 |     |
 | **Rotation** | xyzw | 4   | uint32 |     |
 | **Normal** | X   | 2   | uint16 |     |
 |     | Y   | 2   | uint16 |     |
@@ -176,16 +176,16 @@
 | **Attribute** | **Component** | **ByteDance** | **Type** | **Remarks** |
 | --- | --- | --- | --- | --- |
 | **Postion** | X   | 4   | float |     |
-| Y   | 4   | float |     |
-| Z   | 4   | float |     |
+|     | Y   | 4   | float |     |
+|     | Z   | 4   | float |     |
 | **Color** | RGBA | 4   | uint32 | R: uint8, G: uint8, B: uint8, A: uint8 |
 | **Scale** | X   | 2   | uint16 |     |
-| Y   | 2   | uint16 |     |
-| Z   | 2   | uint16 |     |
+|     | Y   | 2   | uint16 |     |
+|     | Z   | 2   | uint16 |     |
 | **Rotaion** | xyzw | 4   | uint32 |     |
 | **Normal** | X   | 2   | uint16 |     |
-| Y   | 2   | uint16 |     |
-| Z   | 2   | uint16 |     |
+|     | Y   | 2   | uint16 |     |
+|     | Z   | 2   | uint16 |     |
 | **SHcoef** | xyzxyzxyz... | 64  | uint32uint32... |     |
 | **...** |     |     |     |     |
 |     |     |     |     |     |
