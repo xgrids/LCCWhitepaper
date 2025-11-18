@@ -58,7 +58,7 @@
         "name": "XGrids Splats",
         "description": "XGrids all right reserved",
         "source":"lcc",                         //source：lcc、ply、splat、none
-        "dataType":"L1",                        //device：L1、L2、K1、Drone、Drone_L2、PortCam、None
+        "dataType":"L1",                        //device：device：L1、L2、K1、L2Pro、PortCam、Drone、None
         "totalSplats": 3678719,                 //total Splat count ,include all lods
         "totalLevel": 9,                        //lod count
         "cellLengthX": 15.33,                   //Node x length，unit：metre
