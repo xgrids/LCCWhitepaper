@@ -144,26 +144,13 @@
 
 &ensp;&ensp;&ensp;&ensp;The file of **Data.bin** is binary data, which sequentially stores the basic data, using little-endian storage. The data storage structure is as follows:
 
-| **Attribute** | **Component** | **ByteDance** | **Type** | **Remarks** |
-| --- | --- | --- | --- | --- |
-| **Postion** | X   | 4   | float |     |
-| Y   | 4   | float |     |
-| Z   | 4   | float |     |
-| **Color** | RGBA | 4   | uint32 | R: uint8, G: uint8, B: uint8, A: uint8 |
-| **Scale** | X   | 2   | uint16 |     |
-| Y   | 2   | uint16 |     |
-| Z   | 2   | uint16 |     |
-| **Rotation** | xyzw | 4   | uint32 |     |
-| **Normal** | X   | 2   | uint16 |     |
-|     | Y   | 2   | uint16 |     |
-|     | Z   | 2   | uint16 |     |
-| ... |     |     |     |     |
+![data bin](https://github.com/xgrids/LCCWhitepaper/blob/main/a005.png "data bin")
 
 **(d) Shcoef.bin Data Section**
 
 &ensp;&ensp;&ensp;&ensp;The file of **Shcoef.bin** is spherical harmonic coefficients binary data, using little-endian storage, and the data storage structure is as follows:
 
-| **Attribute** | **Component** | **ByteDance** | **Type** | **Remarks** |
+| **Attribute** | **Component** | **Bytes** | **Type** | **Remarks** |
 | --- | --- | --- | --- | --- |
 | SH  | xyzxyzxyz... | 64  | uint32uint32... |     |
 |     | xyzxyzxyz... | 64  | uint32uint32... |     |
@@ -173,22 +160,7 @@
 
 &ensp;&ensp;&ensp;&ensp;Since the amount of environment data is relatively small, its basic data and spherical harmonic coefficients are combined, with only one **environment.bin** file, using little-endian storage:
 
-| **Attribute** | **Component** | **ByteDance** | **Type** | **Remarks** |
-| --- | --- | --- | --- | --- |
-| **Postion** | X   | 4   | float |     |
-| Y   | 4   | float |     |
-| Z   | 4   | float |     |
-| **Color** | RGBA | 4   | uint32 | R: uint8, G: uint8, B: uint8, A: uint8 |
-| **Scale** | X   | 2   | uint16 |     |
-| Y   | 2   | uint16 |     |
-| Z   | 2   | uint16 |     |
-| **Rotaion** | xyzw | 4   | uint32 |     |
-| **Normal** | X   | 2   | uint16 |     |
-| Y   | 2   | uint16 |     |
-| Z   | 2   | uint16 |     |
-| **SHcoef** | xyzxyzxyz... | 64  | uint32uint32... |     |
-| **...** |     |     |     |     |
-|     |     |     |     |     |
+![sh bin](https://github.com/xgrids/LCCWhitepaper/blob/main/a007.png "sh bin")
 
 **(f) Collision.lci Data Section**
 
